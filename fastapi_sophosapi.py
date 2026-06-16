@@ -8,8 +8,8 @@ load_dotenv()
 app = FastAPI()
 
 # 🔐 Credentials
-client_id = os.getenv("CLIENT_ID")
-client_secret = os.getenv("CLIENT_SECRET")
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 
 
 # 🔹 Get Token
@@ -18,8 +18,8 @@ def get_access_token():
 
     data = {
         "grant_type": "client_credentials",
-        "client_id": client_id,
-        "client_secret": client_secret,
+        "CLIENT_ID": CLIENT_ID,
+        "CLIENT_SECRET": CLIENT_SECRET,
         "scope": "token"
     }
 
