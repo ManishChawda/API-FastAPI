@@ -1,11 +1,15 @@
 ﻿from fastapi import FastAPI
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
 # 🔐 Credentials
-client_id = "afacdab1-d807-4556-85b8-183e22214692"
-client_secret = "942963875b8ba9cd024172fd130603ae4d2fdbe18eedf5b9a176c022fad903d7b2b71ac65961755ce6d37f8bdf1d5c9ff952"
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
 
 
 # 🔹 Get Token
