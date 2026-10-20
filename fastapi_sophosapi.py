@@ -1,7 +1,7 @@
 ﻿from fastapi import FastAPI
+from dotenv import load_dotenv
 import requests
 import os
-from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -18,8 +18,8 @@ def get_access_token():
 
     data = {
         "grant_type": "client_credentials",
-        "CLIENT_ID": CLIENT_ID,
-        "CLIENT_SECRET": CLIENT_SECRET,
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET,
         "scope": "token"
     }
 
